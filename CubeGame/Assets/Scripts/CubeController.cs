@@ -55,7 +55,7 @@ public class CubeGravityController : MonoBehaviour
 
     private IEnumerator ChangeGravitySmoothly(float targetGravityScale)
     {
-        float transitionGravitySpeed = 20;
+        float transitionGravitySpeed = 100;
         float startGravityScale = rb.gravityScale;
         float elapsedTime = 0f;
         float duration = 1f / transitionGravitySpeed;

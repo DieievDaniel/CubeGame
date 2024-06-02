@@ -1,8 +1,11 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class ObstacleGenerator : MonoBehaviour
 {
     [SerializeField] private GameObject obstacle;
+    [SerializeField] private GameObject doubleObstacle;
     [SerializeField] private Canvas canvas;
     [SerializeField] private Vector2 spawnPosition;
     [SerializeField] private float minSpeed;
@@ -36,20 +39,22 @@ public class ObstacleGenerator : MonoBehaviour
 
     public void GenerateObstacles()
     {
-        if (canvas == null)
+        GameObject obst;
+
+        if (ScoreData.instance._score >= 5)
         {
-            Debug.LogError("Canvas is not assigned.");
-            return;
+            obst = Instantiate(doubleObstacle);
+        }
+        else
+        {
+            obst = Instantiate(obstacle);
         }
 
-        GameObject obst = Instantiate(obstacle);
         obst.transform.SetParent(canvas.transform, false);
         SetRectTransformPosition(obst, spawnPosition);
         AssignObstacleGenerator(obst);
         Destroy(obst, 5);
     }
-
-
 
     public void SetRectTransformPosition(GameObject obj, Vector2 position)
     {
