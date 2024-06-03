@@ -3,12 +3,13 @@ using System.Collections;
 
 public class CanvasController : MonoBehaviour
 {
-    public RectTransform canvasRectTransform;
-    public float moveSpeed = 2.0f;  // Скорость перемещения
-    public Vector3 targetPosition;  // Конечная позиция
+    [SerializeField] private RectTransform canvasRectTransform;
+    [SerializeField] private float moveSpeed;
+    [SerializeField] private Vector3 targetPosition;  
 
     private bool shouldMove = false;
 
+    #region MONO
     private void Start()
     {
         StartMoving();
@@ -17,17 +18,15 @@ public class CanvasController : MonoBehaviour
     {
         if (shouldMove)
         {
-            // Плавное перемещение RectTransform к целевой позиции
             canvasRectTransform.anchoredPosition = Vector3.Lerp(canvasRectTransform.anchoredPosition, targetPosition, Time.deltaTime * moveSpeed);
-
-            // Остановка перемещения, если RectTransform достиг целевой позиции
+           
             if (Vector3.Distance(canvasRectTransform.anchoredPosition, targetPosition) < 0.01f)
             {
                 shouldMove = false;
             }
         }
     }
-
+    #endregion
     public void StartMoving()
     {
         shouldMove = true;

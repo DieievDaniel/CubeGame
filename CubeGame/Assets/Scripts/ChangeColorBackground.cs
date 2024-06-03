@@ -6,9 +6,9 @@ using UnityEngine.UI;
 public class RandomColorChanger : MonoBehaviour
 {
     [SerializeField] private Image targetImage;
+
     private int previousScore = 0;
-
-
+    #region MONO
     void Update()
     {
         if (ScoreData.instance._score != previousScore)
@@ -21,7 +21,7 @@ public class RandomColorChanger : MonoBehaviour
             previousScore = ScoreData.instance._score;
         }
     }
-
+    #endregion
     public void ChangeToRandomColor()
     {
         if (targetImage != null)

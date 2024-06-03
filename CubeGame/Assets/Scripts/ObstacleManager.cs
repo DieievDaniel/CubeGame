@@ -6,9 +6,10 @@ public class ObstacleManager : MonoBehaviour
 {
     public ObstacleGenerator obstacleGenerator;
 
+#region MONO
     private void Update()
     {
         transform.Translate(Vector2.left * obstacleGenerator._currentSpeed * Time.deltaTime);
     }
-
+    #endregion
 }

@@ -9,11 +9,12 @@ public class ScoreGenerator : MonoBehaviour
 
     [SerializeField] private ObstacleGenerator obstacleGenerator;
 
+    #region MONO
     private void Start()
     {
         InvokeRepeating("GenerateScore", 0f, 2.4f);
     }
-
+    #endregion
     private void GenerateScore()
     {
         GameObject score = Instantiate(scoreObject);

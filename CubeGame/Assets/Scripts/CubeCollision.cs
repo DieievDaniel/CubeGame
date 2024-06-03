@@ -1,7 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
-using UnityEngine.SocialPlatforms.Impl;
+
 
 public class CubeCollision : MonoBehaviour
 {
@@ -19,7 +18,7 @@ public class CubeCollision : MonoBehaviour
         }
         else if (collision.gameObject.CompareTag("Obstacle"))
         {
-            Destroy(collision.gameObject);
+            SceneManager.LoadScene("Menu");
         }
     }
 }

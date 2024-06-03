@@ -10,7 +10,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioClip coinPickupSound;
 
     private AudioSource audioSource;
-
+    #region MONO
     void Awake()
     {
         if (instance == null)
@@ -24,7 +24,6 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    // Start is called before the first frame update
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
@@ -37,13 +36,12 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    // Method to stop the music
+    #endregion
     public void StopMusic()
     {
         audioSource.Stop();
     }
 
-    // Method to resume the music
     public void ResumeMusic()
     {
         if (!audioSource.isPlaying)
@@ -52,7 +50,6 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    // Method to play coin pickup sound
     public void PlayCoinPickupSound()
     {
         audioSource.PlayOneShot(coinPickupSound);
