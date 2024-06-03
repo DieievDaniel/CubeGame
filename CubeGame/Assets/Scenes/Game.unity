@@ -443,10 +443,10 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 998950734}
   - {fileID: 164949947}
   - {fileID: 1443693856}
   - {fileID: 686437020}
-  - {fileID: 998950734}
   - {fileID: 956691207}
   - {fileID: 7265733044547945068}
   - {fileID: 840886189763899563}
@@ -890,62 +890,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &846821813
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 846821815}
-  - component: {fileID: 846821814}
-  m_Layer: 0
-  m_Name: ObstacleGenerator
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &846821814
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 846821813}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7178642a64a17e34e9b5c738139fb494, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  obstacle: {fileID: 0}
-  doubleObstacle: {fileID: 0}
-  canvas: {fileID: 0}
-  spawnPosition: {x: 0, y: 0}
-  minSpeed: 0
-  maxSpeed: 0
-  currentSpeed: 0
-  speedMultiplier: 0
---- !u!224 &846821815
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 846821813}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.32235587}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.02423174, y: -2.525154}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &956691206
 GameObject:
   m_ObjectHideFlags: 0
@@ -1100,10 +1044,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 332637960}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -724}
-  m_SizeDelta: {x: 160, y: 100}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: -4}
+  m_SizeDelta: {x: 0, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &998950735
 MonoBehaviour:
@@ -1181,7 +1125,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1233,7 +1177,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 128, y: -46}
+  m_AnchoredPosition: {x: 142, y: -77}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1403940634
@@ -1586,7 +1530,7 @@ MonoBehaviour:
   minSpeed: 5
   maxSpeed: 12
   currentSpeed: 0
-  speedMultiplier: 0.0015
+  speedMultiplier: 0.005
 --- !u!222 &608020737889631344
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1611,7 +1555,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1641, y: -441}
+  m_AnchoredPosition: {x: 1445, y: -441}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &948536927090326015
@@ -1684,7 +1628,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreObject: {fileID: 1108223019274983341, guid: 1e27952d152026b48b4b8e4af6217927, type: 3}
-  spawnPosition: {x: 1641, y: -441}
+  spawnPosition: {x: 1445, y: -441}
   obstacleGenerator: {fileID: 1792907743}
 --- !u!1 &3181215175384033235
 GameObject:
@@ -1761,7 +1705,6 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 332637960}
   - {fileID: 1516642699}
-  - {fileID: 846821815}
   - {fileID: 209414216}
   - {fileID: 832965652}
   - {fileID: 1541388705}
