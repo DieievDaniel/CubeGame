@@ -12,6 +12,7 @@ public class CubeCollision : MonoBehaviour
         if (collision.gameObject.CompareTag("Score"))
         {
             ScoreData.instance._score += 1;
+            AudioManager.instance.PlayCoinPickupSound();
             gameUI.DisplayScore();
             Destroy(collision.gameObject);
 

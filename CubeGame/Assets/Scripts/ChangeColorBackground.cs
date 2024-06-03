@@ -11,7 +11,6 @@ public class RandomColorChanger : MonoBehaviour
 
     void Update()
     {
-        // Проверяем, изменился ли счет
         if (ScoreData.instance._score != previousScore)
         {
             if (ScoreData.instance._score % 2 == 0 && ScoreData.instance._score > previousScore)
@@ -29,10 +28,6 @@ public class RandomColorChanger : MonoBehaviour
         {
             Color randomColor = new Color(Random.value, Random.value, Random.value);
             targetImage.color = randomColor;
-        }
-        else
-        {
-            Debug.LogError("Target Image is not set!");
         }
     }
 }
